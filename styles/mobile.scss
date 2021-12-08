@@ -1,8 +1,118 @@
 // - Mobile: 375px
 // - Desktop: 1440px
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import 'colors.scss';
 
-body{
+body {
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
+    height: 100vh;
+    background-color: $veryDarkBlueMainBg;
+    color: $softBlue;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+h1 {
+    color: $white;
+
+    &:hover {
+        color: $cyan;
+        cursor: default;
+    }
+}
+
+.card {
+    width: 90vw;
+    margin: auto;
+    padding: 1rem;
+    background: $veryDarkBlueCards;
+    border-radius: 20px;
+
+    .hero-box {
+        display: block;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        padding: 0;
+    }
+
+    .hero-box:hover {
+        &::before {
+            content: '';
+            display: block;
+            background: $cyan;
+            opacity: .5;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            border-radius: 20px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            background: url('../images/icon-view.svg') center center no-repeat;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 11;
+        }
+
+    }
+
+    .hero {
+        display: block;
+        max-width: 100%;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    .details {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    hr {
+        border-color: $veryDarkBlueLine;
+    }
+
+    .creator {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-weight: 300;
+
+        &-avatar {
+            display: block;
+            max-width: 20%;
+            min-width: 60px;
+            border: 1px solid $white;
+            border-radius: 50%;
+        }
+
+        p {
+            margin-left: 1rem;
+        }
+
+        .author-name {
+            color: $white;
+
+            &:hover {
+                color: $cyan;
+                cursor: default;
+            }
+        }
+    }
+
+}
+
+.cyan {
+    color: $cyan;
+    font-weight: 600;
 }

@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  background-color: #0d192b;
+  color: #8bacda;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+h1 {
+  color: white;
+}
+
+h1:hover {
+  color: #00fff7;
+  cursor: default;
+}
+
+.card {
+  width: 90vw;
+  margin: auto;
+  padding: 1rem;
+  background: #14253d;
+  border-radius: 20px;
+}
+
+.card .hero-box {
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 0;
+}
+
+.card .hero-box:hover::before {
+  content: '';
+  display: block;
+  background: #00fff7;
+  opacity: .5;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.card .hero-box:hover::after {
+  content: '';
+  display: block;
+  background: url("../images/icon-view.svg") center center no-repeat;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+}
+
+.card .hero {
+  display: block;
+  max-width: 100%;
+  position: relative;
+  border-radius: 20px;
+}
+
+.card .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card hr {
+  border-color: #2f415b;
+}
+
+.card .creator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+}
+
+.card .creator-avatar {
+  display: block;
+  max-width: 20%;
+  min-width: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card .creator p {
+  margin-left: 1rem;
+}
+
+.card .creator .author-name {
+  color: white;
+}
+
+.card .creator .author-name:hover {
+  color: #00fff7;
+  cursor: default;
+}
+
+.cyan {
+  color: #00fff7;
+  font-weight: 600;
+}
+/*# sourceMappingURL=mobile.css.map */
